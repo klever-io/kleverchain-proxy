@@ -1,0 +1,5 @@
+*.bin
+*.pem
+data/db/
+data/logs/
+data/es/
