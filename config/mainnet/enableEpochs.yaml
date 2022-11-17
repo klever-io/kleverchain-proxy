@@ -1,0 +1,13 @@
+maxNodesChangeEnableEpoch:
+  - epochEnable: 0
+    nodesToShuffle: 4
+  - epochEnable: 256
+    nodesToShuffle: 6
+
+enableEpochs:
+  # Claim KFI enable epoch
+  claimKFI: 40
+  # TX Processor Cacher Flow && ITO Price updates
+  processorFlowITOPrice: 165
+  # FPR/Staking flow
+  fixStakingBuckets: 256

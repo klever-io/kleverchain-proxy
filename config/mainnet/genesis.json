@@ -1,0 +1,682 @@
+[
+  {
+    "_role": "genesis validator address",
+    "address": "klv1q6nwcujtqhvkv6quxeyauxndpepre290vx7p7xslg6ps62wmvazsd9pvx8",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1q6nwcujtqhvkv6quxeyauxndpepre290vx7p7xslg6ps62wmvazsd9pvx8",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1jtgr6ccezedgdyml7wrglufez236xqp0reaf4vjerhqp2qemxypsawl5pa",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1jtgr6ccezedgdyml7wrglufez236xqp0reaf4vjerhqp2qemxypsawl5pa",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1mujczqkpx3k8mpwgyx0wj9llmerm3cx65zsftc02fwngp5qpxccsm737x5",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1mujczqkpx3k8mpwgyx0wj9llmerm3cx65zsftc02fwngp5qpxccsm737x5",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv14xkh77rn0grcgs7wttzt6ndqluvv47fxkf0mclpyu40l3ple0stqcedvyf",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv14xkh77rn0grcgs7wttzt6ndqluvv47fxkf0mclpyu40l3ple0stqcedvyf",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1ngfr7hnwqdz7ffa8hcnkjg5e03gjyt25xwwfah4hclkmzvy8wj5qqamqsa",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1ngfr7hnwqdz7ffa8hcnkjg5e03gjyt25xwwfah4hclkmzvy8wj5qqamqsa",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1x53c5nfj8kec9d3tmqf5n940k0fxhl0xe92mcfgk55xpq4tt9qass96uvc",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1x53c5nfj8kec9d3tmqf5n940k0fxhl0xe92mcfgk55xpq4tt9qass96uvc",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1mn6ar888d4p8pp553dv299r5ceu5et3298depude6rswzfqj72tsad0wnr",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1mn6ar888d4p8pp553dv299r5ceu5et3298depude6rswzfqj72tsad0wnr",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1czkmvaj82ysz064d88w85gtwxa7etggyhz5pm688gljerm3rs6yqgmaef7",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1czkmvaj82ysz064d88w85gtwxa7etggyhz5pm688gljerm3rs6yqgmaef7",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1vj5td7r0evgqwnz5a8t4p5f28tzrvaug3fcn9nua3z3mun0u5nhqtgw3r7",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1vj5td7r0evgqwnz5a8t4p5f28tzrvaug3fcn9nua3z3mun0u5nhqtgw3r7",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1eva67reuen7zu9t9llex728c4jhl38yzs9a0etlshwth8chmlw8s76mdyx",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1eva67reuen7zu9t9llex728c4jhl38yzs9a0etlshwth8chmlw8s76mdyx",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1djmz4g6jye4fwfe39tea2u26dcxhygpuwwmrx3f4knl3f2nyn57s75xrh8",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1djmz4g6jye4fwfe39tea2u26dcxhygpuwwmrx3f4knl3f2nyn57s75xrh8",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv16kxydqgapcg7qrwymwr47nywxxstcu06dvlxpfqta9sgrw7t2djswggl3a",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv16kxydqgapcg7qrwymwr47nywxxstcu06dvlxpfqta9sgrw7t2djswggl3a",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1puzkqvnextltdn8zj4cccnt34tdkpsq22p4hxhju0rlj55vrakpqv9pxu7",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1puzkqvnextltdn8zj4cccnt34tdkpsq22p4hxhju0rlj55vrakpqv9pxu7",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1snntqpqh4c2lgjnluhjpzpc40tvav27lkgfu3w9y77pdsu43j3es408gqq",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1snntqpqh4c2lgjnluhjpzpc40tvav27lkgfu3w9y77pdsu43j3es408gqq",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv16366ldeev79xnf86zdcn6u52y9752vujxue5k23glrmkx6x68jtq0uhur7",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv16366ldeev79xnf86zdcn6u52y9752vujxue5k23glrmkx6x68jtq0uhur7",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1fa0yrspx23gyy70hauarsd3krgnxwe45mtl4uazaltucdl03ua2qcfw4pm",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1fa0yrspx23gyy70hauarsd3krgnxwe45mtl4uazaltucdl03ua2qcfw4pm",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1r043mm2yvjgjc6zxg4g09gm58eqmgn343c5l95f6czdrsykkhp5qwwwt4q",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1r043mm2yvjgjc6zxg4g09gm58eqmgn343c5l95f6czdrsykkhp5qwwwt4q",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1wn2s4agkl832eac8540djmfkuakj084lst70et89hpwmykhv65asu3nq73",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1wn2s4agkl832eac8540djmfkuakj084lst70et89hpwmykhv65asu3nq73",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1h8ndzeg7p033uqy3x3vz745dp75z0m3mc7kud0nqpav55qnn2ecsuz3nyj",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1h8ndzeg7p033uqy3x3vz745dp75z0m3mc7kud0nqpav55qnn2ecsuz3nyj",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1qammdyz99svxwmwu6dz2w6vlz3ezm3jzf284n2wlcuw2672ez7us7hefa5",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1qammdyz99svxwmwu6dz2w6vlz3ezm3jzf284n2wlcuw2672ez7us7hefa5",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "genesis validator address",
+    "address": "klv1ylvxrd7dv30rp2nx6pthsx6kp4effv5my0v2n8rveudjxcewmwus79c002",
+    "balance": 1000000000,
+    "delegation": {
+      "address": "klv1ylvxrd7dv30rp2nx6pthsx6kp4effv5my0v2n8rveudjxcewmwus79c002",
+      "value": 10000000000000
+    },
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "foundation wallet",
+    "address": "klv1edd0ymfmv9r2mxk7mdtsk4zfeql5cp9vyn7t4y4adq58vp2r9alslfglw8",
+    "balance": 500000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "foundation wallet",
+    "address": "klv1jv50j23ec5vzlf79rjc3t44nxwh02766yw8x3980d4qtnxnyzq2qqr5wut",
+    "balance": 500000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "foundation wallet",
+    "address": "klv1nfyr5feugkgq4gz4f3q7c0lu8vh3246qe6vnytmhy2sc3c6d5k0qpd9ydm",
+    "balance": 500000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "foundation wallet",
+    "address": "klv1rquwyta7kh4jueua76xpqkfgcwsws9yadtuxtp5g2cyt5ps04cpq5ywg5x",
+    "balance": 500000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "foundation wallet",
+    "address": "klv1t47kg5hzlfpw3c5fp0c2fssr288d5wn5dzyvafhpxtc6xmq249fsggd59a",
+    "balance": 500000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "foundation wallet",
+    "address": "klv1x9v7kavnvkvmdf7apqhp2j6mvv9dtr84xcp0dlycj2tth4g0ymes5ksn3l",
+    "balance": 500000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "foundation wallet",
+    "address": "klv1zcav8u0nx4nsxf6kjvese7p97j5xdr2y4kwxct05v4slujf7ulnqff5gg6",
+    "balance": 270823000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv1f99temfmxl5cfxr7nzu2svs74tdsujkzqts2hgezxfqpel57tplqzrxja7",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv1lgzel498ta7lu7xqdaupe5ypp7azc4leupcguxxkswauc32t9zjsrjyx0c",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv1llymfg2udf7ssjhxc9hh0fsuljj9enpamq3vvalacphgfakg3w7s27xkhs",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv1pajs67ewvr7l5cu8q3p3va6hqw9zv5689l9g794awspsl749hntsc33r82",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv1s5z889svy3tpkn68luhzzwq2syg4m24a0n03k4kushhnedvyaerqnwyyg5",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv1t28lac99uwrzkgwdtswcculv8fd2xm4ctavz3tawhs9nmlzndk6qlyd3f6",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv1thg75p7756vxjgjmnde7xgqj7uwzdqpun53fyfwekfyjfxfkguxsw3tj0p",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv14ragd2rgqat485vu6ssh4vu9rhmc68mg6vrmkmuhdqda9eeykucqvewgsh",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv16sd7crk4jlc8csrv7lwskqrpjgjklvcsmlhexuesa9p6a3dm57rs5vh0hq",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv16shscvyg2mrxex4zukdsn6rhqje52ekcw8s4kkx69k25jaky943s89u22d",
+    "balance": 500000000000000,
+    "kfiBalance": 2000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 1,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  },
+  {
+    "_role": "migration funds",
+    "address": "klv18rxe570xehake54wlg9nhmreszsmek8uc723jzyn6x7lcakkr6pqlv8gmn",
+    "balance": 393321276908615,
+    "kfiBalance": 1000000000000,
+    "permissions": [
+      {
+        "type": 0, "permissionName": "owner", "threshold": 3, "operations": "",
+        "signers": {
+          "klv1qrmnur2m94r8mh9p3yyxnyw68vquk8j3pp3efcxt8f6jy4w4c8yqegjelw": 2, "klv1ahwmklhxc9lv2p09v9xxqqx0mcfdn7p533j97hxkg7qc6nck6a3qpzvgvk": 3,
+          "klv1mnh6dqgr6ec94ag4ak0dfa2rg4yw2ynwsre6zdr87uf6knuu8kmsv59g3t": 1, "klv1urkpgcnttana98l6nr7a23ef8d3w0td6zw4j66gejhj0sll6lsasgtjgl2": 1,
+          "klv1hze2n777uhmqral8veevt6sqphyav24u0la2fj85uk3m48edr2xs4kcumc": 1, "klv1jcyyv4652vkmysxf33uhenmuyu8pvvsv4efw32vvx8mxt88yqv9sptfya3": 1
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+generalSettings:
+  serverPort: 8701
+  requestTimeoutSec: 80
+  heartbeatCacheValidityDurationSec: 25
+  valStatsCacheValidityDurationSec: 60
+  economicsMetricsCacheValidityDurationSec: 600
+  balancedObservers: true
+  balancedFullHistoryNodes: true
+  faucetValue: '0'
+  rateLimitWindowDurationSeconds: 60
+  geolocationDBPath: "./cmd/proxy/config/geolocationdb.bin"
+cacheSettings:
+  url: 'kleverproxy-cache:6379'
+  password: ''
+faucetCache:
+  db: 0
+  expiration: 24
+validatorsCache:
+  db: 1
+  expiration: 1
+responseCache:
+  db: 2
+  expiration: 3
+addressPubkeyConverter:
+  length: 32
+  type: bech32
+marshalizer:
+  type: protobuf
+hasher:
+  type: blake2b
+apiLogging:
+  loggingEnabled: false
+  thresholdInMicroSeconds: 10000
+observers:
+  - address: 'http://node-indexer:8080'
+fullHistoryNodes:
+  - address: 'https://node-indexer:8080'

@@ -1,0 +1,20 @@
+elasticSearchConnector:
+  enabled: true
+  indexerCacheSize: 100
+  url: http://es01:9200 
+  useKibana: true
+  username:  
+  password:  
+  enabledIndexes:
+    - transactions
+    - blocks
+    - accounts
+    - accountshistory
+    - assets
+    - proposals
+    - marketplaces
+    - network-parameters
+    - rating
+    - epoch
+    - accountskda
+    - peersaccounts

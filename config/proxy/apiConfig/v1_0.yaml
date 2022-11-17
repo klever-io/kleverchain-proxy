@@ -1,0 +1,241 @@
+apiPackages:
+  actions:
+    routes:
+      - name: /reload-observers
+        open: true
+        secured: true
+        rateLimit: 1
+      - name: /reload-full-history-observers
+        open: true
+        secured: true
+        rateLimit: 1
+  node:
+    routes:
+      - name: /statistics
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: /peerinfo
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: /overview
+        open: true
+        secured: false
+        rateLimit: 10
+  address:
+    routes:
+      - name: '/:address'
+        open: true
+        secured: false
+        rateLimit: 120
+      - name: "/:address/overview"
+        open: true
+        secured: false
+        rateLimit: 120
+      - name: "/:address/collection/:collectionID"
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/:address/balance'
+        open: true
+        secured: false
+        rateLimit: 120
+      - name: '/:address/nonce'
+        open: true
+        secured: false
+        rateLimit: 120
+      - name: "/:address/allowance"
+        open: true
+        secured: false
+        rateLimit: 120
+      - name: '/:address/username'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/:address/keys'
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: '/list'
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: '/topsenders'
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: '/:address/transactions'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/list/count/:rangeOfLastDays'
+        open: true
+        secured: false
+        rateLimit: 60
+  assets:
+    routes:
+      - name: '/:id'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: "/:id/:nonce"
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/kassets'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/holders/:address'
+        open: true
+        secured: false
+        rateLimit: 60
+  proposals:
+    routes:
+      - name: '/:id'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/list'
+        open: true
+        secured: false
+        rateLimit: 60
+  marketplaces:
+    routes:
+      - name: '/:id'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/list'
+        open: true
+        secured: false
+        rateLimit: 10
+  block:
+    routes:
+      - name: '/by-hash/:hash'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/by-nonce/:nonce'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/list'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/statistics-by-day/:rangeOfLastDays'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/statistics-total/:rangeOfLastDays'
+        open: true
+        secured: false
+        rateLimit: 60
+  network:
+    routes:
+      - name: /economics
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /config
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /direct-staked-info
+        open: true
+        secured: true
+        rateLimit: 60
+      - name: /delegated-info
+        open: true
+        secured: true
+        rateLimit: 60
+      - name: /enable-epochs
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /network-parameters
+        open: true
+        secured: false
+        rateLimit: 60
+  validator:
+    routes:
+      - name: /list
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /:address
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /delegated/list
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /delegated/:address
+        open: true
+        secured: false
+        rateLimit: 60
+  epoch:
+    routes:
+      - name: /:id
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /list
+        open: true
+        secured: false
+        rateLimit: 60
+  transaction:
+    routes:
+      - name: /send
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: /send-user-funds/:address
+        open: false
+        secured: false
+        rateLimit: 2
+      - name: /send-user-funds/:address/status
+        open: false
+        secured: false
+        rateLimit: 120
+      - name: /cost
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/:txhash'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/by-type/:type'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/:txhash/status'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/list'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: '/list/count/:rangeOfLastDays'
+        open: true
+        secured: false
+        rateLimit: 60
+  proof:
+    routes:
+      - name: '/root-hash/:roothash/address/:address'
+        secured: false
+        open: false
+        rateLimit: 10
+      - name: '/address/:address'
+        secured: false
+        open: false
+        rateLimit: 10
+      - name: /verify
+        secured: false
+        open: false
+        rateLimit: 10
