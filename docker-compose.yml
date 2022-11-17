@@ -1,0 +1,94 @@
+version: '3'
+
+services:
+# ELASTICSEARCH
+  es01:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.2.3
+    container_name: es01
+    environment:
+      - node.name=es01
+      - cluster.name=klever-cluster
+      - cluster.routing.allocation.disk.threshold_enabled=false
+      - bootstrap.memory_lock=true
+      - xpack.security.enabled=false
+      - xpack.security.http.ssl.enabled=false
+      - network.host=0.0.0.0
+      - discovery.type=single-node
+    mem_limit: 1073741824
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - ./data/es:/usr/share/elasticsearch/data
+    healthcheck:
+      test: curl -s http://es01:9200 >/dev/null || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks:
+      - klever
+  kib01:
+    image: docker.elastic.co/kibana/kibana:8.2.3
+    container_name: kib01
+    ports:
+      - 5601:5601
+    environment:
+      ELASTICSEARCH_URL: http://es01:9200
+      ELASTICSEARCH_HOSTS: '["http://es01:9200"]'
+    depends_on:
+      es01:
+        condition: service_healthy
+    networks:
+      - klever
+
+# NODE indexer
+  indexer:
+    image: kleverapp/klever-go:latest
+    container_name: node-indexer
+    depends_on:
+      es01:
+        condition: service_healthy
+    volumes:
+      - ./config/mainnet:/opt/klever-blockchain/config/node
+      - ./data/db:/opt/klever-blockchain/db
+      - ./data/logs:/opt/klever-blockchain/logs
+    entrypoint: [ "/usr/local/bin/validator", "--log-level=*:INFO", "--log-save", "--use-log-view", "--rest-api-interface=0.0.0.0:8080"]
+    ports:
+      - 8080:8080
+    networks:
+      - klever
+
+# PROXY
+  cache:
+    image: redis:alpine
+    container_name: kleverproxy-cache
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30
+    networks:
+      - klever
+
+  kleverproxy:
+    image: kleverapp/klever-proxy-go:latest
+    container_name: kleverproxy
+    depends_on:
+      es01:
+        condition: service_healthy
+      cache:
+        condition: service_healthy
+    ports:
+      - 8701:8701
+    volumes:
+      - ./config/proxy:/opt/klever-proxy-go/cmd/proxy/config/
+    networks:
+      - klever
+
+networks:
+  klever:
+    driver: bridge
