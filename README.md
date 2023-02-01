@@ -33,6 +33,7 @@ Or
 
 ### Clone Repository
 ```sudo git clone https://github.com/klever-io/kleverchain-proxy.git```
+
 ```cd kleverchain-proxy```
 
 ### Download geo location data
