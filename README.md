@@ -18,7 +18,7 @@ sudo reboot
 ```
 
 ### Install docker
-```curl -fsSL https://get.docker.com (https://get.docker.com/) | bash```
+```curl -fsSL https://get.docker.com | bash```
 
 ### Install docker-compose
 ```docker-compose apt-get install docker-compose```
