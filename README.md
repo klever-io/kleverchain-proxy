@@ -72,4 +72,4 @@ chmod -R o+rw config/
 ### Enable firewall
 ```sudo ufw enable```
 
-ufw status
+```ufw status```
