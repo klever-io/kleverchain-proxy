@@ -131,3 +131,34 @@ Then the indexer will sync the leftover epochs. So delete these. You need to sto
 ```
  "--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check",
 ```
+
+## Edit firewall on Ubuntu or Debian
+
+#### Allow ssh for terminal
+```
+sudo ufw allow ssh
+```
+#### Enable firewall logging (optional)
+```
+sudo ufw logging on
+```
+#### Klever-Node communication
+```
+ufw allow 37373:38383/tcp
+```
+#### Node-API (optional)
+```
+ufw allow 8080/tcp
+```
+#### Swagger-API
+```
+ufw allow 8701/tcp
+```
+### Enable firewall
+```
+sudo ufw enable
+```
+
+```
+ufw status
+```
