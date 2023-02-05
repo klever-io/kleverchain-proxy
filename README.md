@@ -112,12 +112,12 @@ curl -k https://backup.mainnet.klever.finance/kleverchain.mainnet.latest.tar.gz 
 ### Run speedup method
 To run the speed up you need to add import flag in the Node Indexer entrypoint line at the end of the line before ] 
 ```
- "--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check",
+ "--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check"
 ```
 
 looks like this : 
 ```
-entrypoint: [ "/usr/local/bin/validator", "--log-level=*:INFO", "--log-save", "--use-log-view", "--rest-api-interface=0.0.0.0:8080", "--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check",]
+entrypoint: [ "/usr/local/bin/validator", "--log-level=*:INFO", "--log-save", "--use-log-view", "--rest-api-interface=0.0.0.0:8080", "--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check"]
 ```
 
 ### Run stack
