@@ -129,7 +129,7 @@ sudo make composerup
 When the speedup sync is completed then you must remove the 2 flags we added in the beginning from the docker-compose.yml
 Then the indexer will sync the leftover epochs. So delete these. You need to stop the node-indexer container and the kleverproxy container, and run command make composerup again.
 ```
- "--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check",
+ "--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check"
 ```
 
 ## Edit firewall on Ubuntu or Debian
