@@ -7,13 +7,6 @@ Stack:
 
 This stack can be used to extend node queries. For better performance is recommended to create a ElasticSearch cluster instead of single node contained in this composer file. ElasticSearch endpoint can be updated in `external.yaml` file inside `/config/mainnet` and `/config/proxy`.
 
-### Update to docker compose 1.29
-```curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
-```chmod +x /usr/local/bin/docker-compose```
-
-### Install Make
-```apt-get -y install make```
-
 ### Clone Repository
 ```git clone https://github.com/klever-io/kleverchain-proxy.git```
 
