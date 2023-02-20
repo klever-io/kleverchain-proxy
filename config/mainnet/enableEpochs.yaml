@@ -11,3 +11,5 @@ enableEpochs:
   processorFlowITOPrice: 165
   # FPR/Staking flow
   fixStakingBuckets: 256
+  # KDA FPR flow
+  kdaFpr: 992
