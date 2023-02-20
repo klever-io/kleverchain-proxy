@@ -7,33 +7,23 @@ Stack:
 
 This stack can be used to extend node queries. For better performance is recommended to create a ElasticSearch cluster instead of single node contained in this composer file. ElasticSearch endpoint can be updated in `external.yaml` file inside `/config/mainnet` and `/config/proxy`.
 
-## Installation preparations
-```
-sudo su
-sudo apt update
-sudo apt upgrade
-```
-```
-sudo reboot
-```
-
 ### Update to docker compose 1.29
 ```curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose```
 ```chmod +x /usr/local/bin/docker-compose```
 
 ### Install Make
-```sudo apt-get -y install make```
+```apt-get -y install make```
 
 ### Clone Repository
-```sudo git clone https://github.com/klever-io/kleverchain-proxy.git```
+```git clone https://github.com/klever-io/kleverchain-proxy.git```
 
 ```cd kleverchain-proxy```
 
 ### Download geo location data
-```sudo make geoloc-file```
+```make geoloc-file```
 
 ### Create Node BLSKey
-```sudo make nodePEM```
+```make nodePEM```
 
 ### Set folder rights
 ```
@@ -43,7 +33,7 @@ chmod -R o+rw config/
 ```
 
 ### Run Stack
-```sudo make composerup```
+```make composerup```
 
 ## Edit firewall on Ubuntu
 
