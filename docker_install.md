@@ -1,3 +1,13 @@
+## Installation preparations
+```
+sudo su
+sudo apt update
+sudo apt upgrade
+```
+```
+sudo reboot
+```
+
 ### Install docker
 ```curl -fsSL https://get.docker.com | bash```
 
@@ -5,4 +15,5 @@
 ```apt-get install docker-compose```
 
 ### Check docker status
-```sudo systemctl status docker```
+```systemctl status docker```
+
