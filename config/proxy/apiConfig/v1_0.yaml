@@ -87,10 +87,18 @@ apiPackages:
         open: true
         secured: false
         rateLimit: 60
-      - name: '/holders/:address'
+      - name: '/holders/:assetID'
         open: true
         secured: false
         rateLimit: 60
+      - name: '/pool/:poolID'
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: "/precisions"
+        open: true
+        secured: false
+        rateLimit: 0
   proposals:
     routes:
       - name: '/:id'
@@ -107,10 +115,22 @@ apiPackages:
         open: true
         secured: false
         rateLimit: 60
+      - name: "/:id/collections"
+        open: true
+        secured: false
+        rateLimit: 60
+      - name: "/:id/collections/*asset"
+        open: true
+        secured: false
+        rateLimit: 60
       - name: '/list'
         open: true
         secured: false
         rateLimit: 10
+      - name: "/:id/leaderboard"
+        open: true
+        secured: false
+        rateLimit: 0
   block:
     routes:
       - name: '/by-hash/:hash'
@@ -238,4 +258,14 @@ apiPackages:
       - name: /verify
         secured: false
         open: false
+        rateLimit: 10
+  ito:
+    routes:
+      - name: "/:id"
+        secured: false
+        open: true
+        rateLimit: 60
+      - name: "/list"
+        open: true
+        secured: false
         rateLimit: 10
