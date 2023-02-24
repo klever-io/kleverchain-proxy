@@ -18,5 +18,6 @@ elasticSearchConnector:
     - epoch
     - accountskda
     - peersaccounts
+    - marketplaceorders
     - itos
     - kdapools
