@@ -13,3 +13,5 @@ enableEpochs:
   fixStakingBuckets: 256
   # KDA FPR flow
   kdaFpr: 992
+  # Compute APR and FPR with big Buckets
+  bigBucketsCompute: 1196
