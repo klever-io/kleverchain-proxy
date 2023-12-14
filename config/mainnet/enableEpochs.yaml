@@ -11,7 +11,11 @@ enableEpochs:
   processorFlowITOPrice: 165
   # FPR/Staking flow
   fixStakingBuckets: 256
-  # KDA FPR flow
+  #  KDA FPR flow
   kdaFpr: 992
   # Compute APR and FPR with big Buckets
   bigBucketsCompute: 1196
+  # Compute FPR int Amount and Kda Fee Flow
+  fprComputeAndKdaFeeFlow: 1468
+  # Fix Delegation step on same epoch
+  fixDelegationSameEpoch: 1532
