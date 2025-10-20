@@ -21,6 +21,9 @@ validatorsCache:
 responseCache:
   db: 2
   expiration: 3
+networkCache:
+  db: 3
+  expiration: 10
 addressPubkeyConverter:
   length: 32
   type: bech32
@@ -31,7 +34,13 @@ hasher:
 apiLogging:
   loggingEnabled: false
   thresholdInMicroSeconds: 10000
+prices:
+  url: ""
+  apiKey: ""
 observers:
   - address: 'http://node-indexer:8080'
 fullHistoryNodes:
-  - address: 'https://node-indexer:8080'
+  - address: 'http://node-indexer:8080'
+cors:
+  - origin: "http://node-indexer:8080"
+  - origin: "https://node-indexer:8080"
