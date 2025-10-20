@@ -1,7 +1,7 @@
 p2p:
   node:
     port: 37373-38383
-    seed: 
+    seed:
     maximumExpectedPeerCount: 0
     thresholdMinConnectedPeers: 3
     broadcastIP:
@@ -55,10 +55,32 @@ preferences:
   redundancyLevel: 0
   # statics pooling interval
   statusPollingIntervalSec: 2
+  # MaxComputableSlots represents the max number of slots computable in a round
+  # by the validator statistics processor
+  maxComputableSlots: 100
+
+blockSizeThrottleConfig:
+  minSizeInBytes: 104857 # 104857 is 10% from 1MB
+  maxSizeInBytes: 943718 # 943718 is 90% from 1MB
 
 softwareVersionConfig:
   stableTagLocation: "https://api.github.com/repos/klever-io/klever-go/releases/latest"
   pollingIntervalInMinutes: 65
+
+logsAndEvents:
+  saveInStorageEnabled: true
+  txLogsStorage:
+    cache:
+      name: TxLogsStorage
+      capacity: 1000
+      type: SizeLRU
+      sizeInBytes: 20971520 #20MB
+    db:
+      filePath: Logs
+      type: LvlDBSerial
+      batchDelaySeconds: 2
+      maxBatchSize: 100
+      maxOpenFiles: 10
 
 debug:
   interceptorResolver:
@@ -98,7 +120,7 @@ antiflood:
     reservedPercent: 20.0
     peerMaxInput:
       baseMessagesPerInterval: 6000
-      totalSizePerInterval: 18874368 # 18MB/interval
+      totalSizePerInterval: 33554432 # 32MB/interval
       increaseFactor:
         threshold: 10 #if consensus size will exceed this value, then
         factor: 0.0 #increase the base value with [factor*consensus size]
@@ -133,7 +155,7 @@ antiflood:
     type: LRU
 
   topic:
-    defaultMaxMessagesPerSec: 15000
+    defaultMaxMessagesPerSec: 35000
     maxMessages:
       - topic: heartbeat
         numMessagesPerSec: 70
@@ -172,10 +194,6 @@ heartbeat:
   hideInactiveValidatorIntervalInSec: 3600
   durationToConsiderUnresponsiveInSec: 60
 
-softwareVersion:
-  stableTagLocation: https://api.github.com/repos/klever-io/klever-go/releases/latest
-  pollingIntervalInMinutes: 65
-
 # DB CONFIGs
 evictionWaitingList:
   size: 10000
@@ -188,7 +206,7 @@ evictionWaitingList:
 
 stateTriesConfig:
   checkpointSlotsModulus: 100
-  accountsStatePruningEnabled: true
+  accountsStatePruningEnabled: false
   peerStatePruningEnabled: true
   kappStatePruningEnabled: true
   maxStateTrieLevelInMemory: 5
@@ -237,6 +255,9 @@ whiteListerVerifiedTxs:
 resourceStats:
   enabled: true
   refreshIntervalInSec: 30
+
+validatorStatistics:
+  cacheRefreshIntervalInSec: 60
 
 accountsTrieStorage:
   cache:
@@ -356,6 +377,42 @@ storages:
       batchDelaySeconds: 2
       maxBatchSize: 100
       maxOpenFiles: 10
+  smartContractsStorage:
+    cache:
+      name: SmartContractsStorage
+      capacity: 1000
+      type: SizeLRU
+      sizeInBytes: 52428800 #50MB
+    db:
+      filePath: SmartContractsStorage
+      type: LvlDBSerial
+      batchDelaySeconds: 2
+      maxBatchSize: 100
+      maxOpenFiles: 10
+  smartContractsStorageSimulate:
+    cache:
+      name: SmartContractsStorageSimulate
+      capacity: 1000
+      type: SizeLRU
+      sizeInBytes: 52428800 #50MB
+    db:
+      filePath: SmartContractsStorageSimulate
+      type: LvlDBSerial
+      batchDelaySeconds: 2
+      maxBatchSize: 100
+      maxOpenFiles: 10
+  smartContractsStorageForSCQuery:
+    cache:
+      name: SmartContractsStorageForSCQuery
+      capacity: 1000
+      type: SizeLRU
+      sizeInBytes: 52428800 #50MB
+    db:
+      filePath: SmartContractsStorageForSCQuery
+      type: LvlDBSerial
+      batchDelaySeconds: 2
+      maxBatchSize: 100
+      maxOpenFiles: 10
 
 dbLookupExtensions:
   enabled: false
@@ -389,7 +446,7 @@ dbLookupExtensions:
 
 storagePruning:
   # If the Enabled flag is set to false, then the storers won't divide epochs into separate dbs
-  enabled:  false
+  enabled: false
   # If this flag is set to false, the node won't delete any database between epochs
   cleanOldEpochsData: false
   # NumEpochsToKeep - if the flag above is set to true, this will set the number of epochs to keep in the storage.
@@ -399,19 +456,6 @@ storagePruning:
   # the node removes old epochs data or not. In case of a node which removes old epochs data, this value has to be
   # smaller or equal to the NumOfEpochsToKeep flag
   numActivePersisters: 9
-
-txLogsStorage:
-  cache:
-    name: TxLogsStorage
-    capacity: 1000
-    type: SizeLRU
-    sizeInBytes: 20971520 #20MB
-  db:
-    filePath: Logs
-    type: LvlDBSerial
-    batchDelaySeconds: 2
-    maxBatchSize: 100
-    maxOpenFiles: 10
 
 txDataPool:
   name: TxDataPool
@@ -431,6 +475,12 @@ trieNodesDataPool:
   capacity: 900000
   type: SizeLRU
   sizeInBytes: 314572800 #300MB
+
+smartContractDataPool:
+  name: SmartContractDataPool
+  capacity: 900000
+  type: SizeLRU
+  sizeInBytes: 209715200 #200MB
 
 #PublicKeyPeerID represents the main cache used to map Klever block signing public keys to their associated peer id's.
 publicKeyPeerID:
@@ -454,6 +504,11 @@ peerHonesty:
   capacity: 5000
   type: LRU
 
+vmOutputCacher:
+  name: VMOutputCacher
+  capacity: 10000
+  type: LRU
+
 # Crypto Configs
 hasher:
   type: blake2b
@@ -473,10 +528,6 @@ elasticSearch:
   url: "http://localhost:9200"
   username: basic_auth_username
   password: basic_auth_password
-
-maxNodesChangeEnableEpoch:
-  - epochEnable: 0
-    nodesToShuffle: 4
 
 #Ratings configuration
 
@@ -539,73 +590,29 @@ epochStart:
   minNumConnectedPeersToStart: 2
   minNumOfPeersToConsiderBlockValid: 2
 
-hardfork:
-  enableTrigger: true
-  enableTriggerFromP2P: true
-  publicKeyToListenFrom: "f1663ce2c161cabc22739d3d827e1662ef79d46577db9300980ce5782a0bd264aabd19e35b1835c5b3c559766ea0cb0c46088a578e175dfaaef581764864bc7a75450c3640ec973882d06c3ab1ab4ffdf00f036884dbabf6ab8a7a5d27e76b99"
-  closeAfterExportInMinutes: 10000
-  afterHardFork: false
-  importFolder: "export"
-  startSlot: 10000
-  startNonce: 10000
-  startEpoch: 100
-  genesisTime: 0
-  validatorGracePeriodInEpochs: 1 #defines how long is the rating computation disabled after hardfork
-  exportStateStorageConfig:
-    cache:
-      name: "HardFork.ExportStateStorageConfig"
-      capacity: 5000
-      type: "LRU"
-    db:
-      filePath: "ExportStateStorage/MainDB"
-      type: "LvlDBSerial"
-      batchDelaySeconds: 2
-      maxBatchSize: 1000
-      maxOpenFiles: 10
-  exportKeysStorageConfig:
-    cache:
-      name: "HardFork.ExportKeysStorageConfig"
-      capacity: 5000
-      type: "LRU"
-    db:
-      filePath: "ExportKeysStorageConfig/MainDB"
-      type: "LvlDBSerial"
-      batchDelaySeconds: 2
-      maxBatchSize: 1000
-      maxOpenFiles: 10
-  exportTriesStorageConfig:
-    cache:
-      name: "HardFork.ExportTriesStorageConfig"
-      capacity: 5000
-      type: "LRU"
-    db:
-      filePath: "ExportTrieStorage/MainTrie"
-      type: "LvlDBSerial"
-      batchDelaySeconds: 2
-      maxBatchSize: 1000
-      maxOpenFiles: 10
-  importStateStorageConfig:
-    cache:
-      name: "HardFork.ImportStateStorageConfig"
-      capacity: 5000
-      type: "LRU"
-    db:
-      filePath: "ExportStateStorage/MainDB"
-      type: "LvlDBSerial"
-      batchDelaySeconds: 2
-      maxBatchSize: 1000
-      maxOpenFiles: 10
-  importKeysStorageConfig:
-    cache:
-      name: "HardFork.ImportKeysStorageConfig"
-      capacity: 5000
-      type: "LRU"
-    db:
-      filePath: "ExportKeysStorageConfig/MainDB"
-      type: "LvlDBSerial"
-      batchDelaySeconds: 2
-      maxBatchSize: 1000
-      maxOpenFiles: 10
+virtualMachine:
+  execution:
+    timeOutForSCExecutionInMilliseconds: 500 # 0.5 seconds = 500 milliseconds
+    wasmerSIGSEGVPassthrough: false # must be false for release
+    wasmVMVersions:
+      - startEpoch: 0
+        version: "v1.0"
+
+  querying:
+    numConcurrentVMs: 1
+    timeOutForSCExecutionInMilliseconds: 500 # 0.5 seconds = 500 milliseconds
+    wasmerSIGSEGVPassthrough: false # must be false for release
+    wasmVMVersions:
+      - startEpoch: 0
+        version: "v1.0"
+
+  gasConfig:
+    # The following values define the maximum amount of gas to be allocated for VM Queries coming from API
+    # If set to 0, then MaxUInt64 will be used
+    metaMaxGasPerVmQuery: 1500000000  # Set reasonable limit
+
+builtInFunctions:
+  maxNumAddressesInTransferRole: 100
 
 trieSync:
   numConcurrentTrieSyncers: 200
@@ -617,3 +624,5 @@ importDbConfig:
   importDBWorkingDir: "./importedDB"
   importDbNoSigCheckFlag: false
   importDbSaveTrieEpochRootHash: false
+
+consensusMonitorList:
