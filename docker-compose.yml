@@ -14,13 +14,14 @@ services:
       - xpack.security.http.ssl.enabled=false
       - network.host=0.0.0.0
       - discovery.type=single-node
-    mem_limit: 1073741824
     ulimits:
       memlock:
         soft: -1
         hard: -1
     volumes:
       - ./data/es:/usr/share/elasticsearch/data
+      - ./elasticsearch/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./elasticsearch/jvm.options:/usr/share/elasticsearch/config/jvm.options.d/jvm.options
     healthcheck:
       test: curl -s http://es01:9200 >/dev/null || exit 1
       interval: 30s
@@ -47,7 +48,7 @@ services:
 
 # NODE indexer
   indexer:
-    image: kleverapp/klever-go:latest
+    image: kleverapp/klever-go:v1.7.14-0-g22769b30
     container_name: node-indexer
     depends_on:
       es01:
