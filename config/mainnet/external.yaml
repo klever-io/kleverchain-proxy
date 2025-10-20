@@ -21,3 +21,5 @@ elasticSearchConnector:
     - marketplaceorders
     - itos
     - kdapools
+    - logs
+    - scdeploys

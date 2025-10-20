@@ -1,14 +1,4 @@
 apiPackages:
-  actions:
-    routes:
-      - name: /reload-observers
-        open: true
-        secured: true
-        rateLimit: 1
-      - name: /reload-full-history-observers
-        open: true
-        secured: true
-        rateLimit: 1
   node:
     routes:
       - name: /statistics
@@ -23,59 +13,83 @@ apiPackages:
         open: true
         secured: false
         rateLimit: 10
-  address:
-    routes:
-      - name: '/:address'
+      - name: /locations
         open: true
         secured: false
-        rateLimit: 120
+        rateLimit: 15
+      - name: /aggregate
+        open: true
+        secured: false
+        rateLimit: 15
+  address:
+    routes:
+      - name: "/:address"
+        open: true
+        secured: false
+        rateLimit: 30
       - name: "/:address/overview"
         open: true
         secured: false
-        rateLimit: 120
+        rateLimit: 30
       - name: "/:address/collection/:collectionID"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/:address/balance'
+        rateLimit: 30
+      - name: "/:address/balance"
         open: true
         secured: false
-        rateLimit: 120
-      - name: '/:address/nonce'
+        rateLimit: 30
+      - name: "/:address/nonce"
         open: true
         secured: false
-        rateLimit: 120
+        rateLimit: 30
       - name: "/:address/allowance"
         open: true
         secured: false
-        rateLimit: 120
-      - name: '/:address/username'
+        rateLimit: 30
+      - name: "/:address/allowance/list"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/:address/keys'
+        rateLimit: 20
+      - name: "/:address/username"
         open: true
         secured: false
-        rateLimit: 10
-      - name: '/list'
-        open: true
-        secured: false
-        rateLimit: 10
-      - name: '/topsenders'
+        rateLimit: 30
+      - name: "/:address/keys"
         open: true
         secured: false
         rateLimit: 10
-      - name: '/:address/transactions'
+      - name: "/list"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/list/count/:rangeOfLastDays'
+        rateLimit: 10
+      - name: "/topsenders"
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 10
+      - name: "/:address/transactions"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/list/count/:rangeOfLastDays"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/list/histogram/:rangeOfLastDays"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/lastclaim"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/statistics"
+        open: true
+        secured: false
+        rateLimit: 30
   assets:
     routes:
-      - name: '/:id'
+      - name: "/:id"
         open: true
         secured: false
         rateLimit: 60
@@ -83,38 +97,63 @@ apiPackages:
         open: true
         secured: false
         rateLimit: 60
-      - name: '/kassets'
+      - name: "/list"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/holders/:assetID'
-        open: true
-        secured: false
-        rateLimit: 60
-      - name: '/pool/:poolID'
-        open: true
-        secured: false
-        rateLimit: 60
-      - name: "/precisions"
+        rateLimit: 10
+      - name: "/sft/:id"
         open: true
         secured: false
         rateLimit: 0
+      - name: "/sft/:id/:nonce"
+        open: true
+        secured: false
+        rateLimit: 0
+      # deprecated
+      - name: "/kassets"
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: "/holders/:assetID"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/nft/holder/*nftID"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/pool/list"
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: "/pool/:poolID"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/precisions"
+        open: true
+        secured: false
+        rateLimit: 30
   proposals:
     routes:
-      - name: '/:id'
+      - name: "/:id"
         open: true
         secured: false
         rateLimit: 60
-      - name: '/list'
+      - name: "/list"
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
   marketplaces:
     routes:
-      - name: '/:id'
+      - name: "/:id"
         open: true
         secured: false
         rateLimit: 60
+      - name: "/:id/orders"
+        open: true
+        secured: false
+        rateLimit: 30
       - name: "/:id/collections"
         open: true
         secured: false
@@ -122,97 +161,129 @@ apiPackages:
       - name: "/:id/collections/*asset"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/list'
+        rateLimit: 30
+      - name: "/list"
         open: true
         secured: false
         rateLimit: 10
       - name: "/:id/leaderboard"
         open: true
         secured: false
-        rateLimit: 0
+        rateLimit: 30
+      - name: "/nfts/activity"
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: "/:id/:collection/:nftID"
+        open: true
+        secured: false
+        rateLimit: 30
   block:
     routes:
-      - name: '/by-hash/:hash'
+      - name: "/by-hash/:hash"
         open: true
         secured: false
         rateLimit: 60
-      - name: '/by-nonce/:nonce'
+      - name: "/by-nonce/:nonce"
         open: true
         secured: false
         rateLimit: 60
-      - name: '/list'
+      - name: "/list"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/statistics-by-day/:rangeOfLastDays'
+        rateLimit: 30
+      - name: "/statistics-by-day/:rangeOfLastDays"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/statistics-total/:rangeOfLastDays'
+        rateLimit: 30
+      - name: "/statistics-total/:rangeOfLastDays"
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
   network:
     routes:
       - name: /economics
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
       - name: /config
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
       - name: /direct-staked-info
         open: true
         secured: true
-        rateLimit: 60
+        rateLimit: 30
       - name: /delegated-info
         open: true
         secured: true
-        rateLimit: 60
+        rateLimit: 30
       - name: /enable-epochs
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
       - name: /network-parameters
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
   validator:
     routes:
       - name: /list
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
       - name: /:address
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
       - name: /delegated/list
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
       - name: /delegated/:address
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
+      - name: /best-matches
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: /blocks/:bls
+        open: true
+        secured: false
+        rateLimit: 10
+      - name: /statistics
+        open: true
+        secured: false
+        rateLimit: 30
   epoch:
     routes:
       - name: /:id
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
       - name: /list
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
   transaction:
     routes:
+      - name: /decode
+        open: true
+        secured: false
+        rateLimit: 30
       - name: /send
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 30
+      - name: /simulate
+        open: true
+        secured: false
+        rateLimit: 30
+      - name: /send-multiple
+        open: true
+        secured: false
+        rateLimit: 30
       - name: /send-user-funds/:address
         open: false
         secured: false
@@ -224,34 +295,66 @@ apiPackages:
       - name: /cost
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/:txhash'
+        rateLimit: 30
+      - name: "/:txhash"
         open: true
         secured: false
         rateLimit: 60
-      - name: '/by-type/:type'
+      - name: "/by-type/:type"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/:txhash/status'
+        rateLimit: 30
+      - name: "/:txhash/status"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/list'
+        rateLimit: 30
+      - name: "/list"
         open: true
         secured: false
-        rateLimit: 60
-      - name: '/list/count/:rangeOfLastDays'
+        rateLimit: 15
+      - name: "/list/count/:rangeOfLastDays"
         open: true
         secured: false
-        rateLimit: 60
+        rateLimit: 15
+      - name: "/list/histogram/:rangeOfLastDays"
+        open: true
+        secured: false
+        rateLimit: 15
+      - name: "/count/bymonth"
+        open: true
+        secured: false
+        rateLimit: 15
+      - name: "/statistics"
+        open: true
+        secured: false
+        rateLimit: 20
+  ito:
+    routes:
+      - name: '/:id'
+        open: true
+        secured: false
+        rateLimit: 15
+      - name: "/list"
+        open: true
+        secured: false
+        rateLimit: 10
+  sc:
+    routes:
+      - name: "/:address"
+        secured: false
+        open: true
+        rateLimit: 30
+      - name: "/list"
+        open: true
+        secured: false
+        rateLimit: 30
   proof:
     routes:
-      - name: '/root-hash/:roothash/address/:address'
+      - name: "/root-hash/:roothash/address/:address"
         secured: false
         open: false
         rateLimit: 10
-      - name: '/address/:address'
+      - name: "/address/:address"
         secured: false
         open: false
         rateLimit: 10
@@ -259,13 +362,9 @@ apiPackages:
         secured: false
         open: false
         rateLimit: 10
-  ito:
+  health:
     routes:
-      - name: "/:id"
+      - name: "/health"
         secured: false
         open: true
-        rateLimit: 60
-      - name: "/list"
-        open: true
-        secured: false
-        rateLimit: 10
+        rateLimit: 20

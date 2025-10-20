@@ -19,3 +19,12 @@ enableEpochs:
   fprComputeAndKdaFeeFlow: 1468
   # Fix Delegation step on same epoch
   fixDelegationSameEpoch: 1532
+  # SmartContracts
+  smartContracts: 4860
+  # Audit Changes
+  fixAuditChanges: 4860
+
+gasSchedule:
+  gasScheduleByEpochs:
+    - startEpoch: 4860
+      fileName: "config/node/gasScheduleV1.yaml"
