@@ -23,6 +23,16 @@ enableEpochs:
   smartContracts: 4860
   # Audit Changes
   fixAuditChanges: 4860
+  # Epoch Rewards V2
+  epochRewardsV2: 5536
+  # Audit Changes V2
+  fixAuditChangesV2: 5612
+  # Fix Market Buy Overflow
+  fixMarketBuyOverflow: 5741
+  # Audit Changes V3
+  fixAuditChangesV3: 5911
+  # Audit Changes V4
+  fixAuditChangesV4: 6060
 
 gasSchedule:
   gasScheduleByEpochs:
