@@ -48,7 +48,7 @@ services:
 
 # NODE indexer
   indexer:
-    image: kleverapp/klever-go:v1.7.14-0-g22769b30
+    image: kleverapp/klever-go:v1.7.21-rc2
     container_name: node-indexer
     depends_on:
       es01:
