@@ -424,6 +424,7 @@ WASMOpcodeCost:
   MemoryCopy: 5
   MemoryFill: 5
   TableInit: 10
+  TableInitPerElement: 10
   ElemDrop: 10
   TableCopy: 10
   TableFill: 10

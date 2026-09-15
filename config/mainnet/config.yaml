@@ -27,30 +27,43 @@ p2p:
     #              the shard membership of the connected peers
     #  `NilListSharder` will disable connection trimming (sharder is off)
     type: NilListSharder
-    # Optional libp2p ResourceManager tuning. Omitting this section is equivalent
-    # to strategy "" / "default": libp2p's auto-scaled DefaultResourceManager
-    # (memory budget = TotalRAM/8) is used. Available strategies:
-    #   ""        leave libp2p's auto-scaled DefaultResourceManager in place.
-    #   "default" same as "" — explicit libp2p auto-scale.
-    #   "null"    disable libp2p resource limits (bounded only by OS ulimit and RAM).
-    #   "scaled"  auto-scale limits as if the host had `scaledMemoryMiB` MiB of memory.
-    # Example: lift caps on a small host without going fully unbounded:
-    #
-    # resourceManager:
-    #   strategy: scaled
-    #   scaledMemoryMiB: 16384
-    # Optional caps on the inbound direct-send streams this node accepts (KLC-2433).
-    # Omitting this section, or leaving a knob at 0, keeps the built-in defaults:
-    # 4 streams per peer and 512 across all peers. A well-behaved peer reuses a
-    # single direct-send stream, so the per-peer default is headroom for
-    # reset/reopen churn; the node-wide cap bounds reader goroutines when a source
-    # rotates peer identities. Raise them only if legitimate traffic is refused —
-    # the node logs "refusing inbound direct stream" when a cap is hit. Negative
-    # values are a configuration error and the node refuses to start.
-    #
-    # directSend:
-    #   maxInboundStreamsPerPeer: 4
-    #   maxInboundStreamsTotal: 512
+  # Optional libp2p ResourceManager tuning. Omitting this section is equivalent
+  # to strategy "" / "default": libp2p's auto-scaled DefaultResourceManager
+  # (memory budget = TotalRAM/8) is used. Available strategies:
+  #   ""        leave libp2p's auto-scaled DefaultResourceManager in place.
+  #   "default" same as "" — explicit libp2p auto-scale.
+  #   "null"    disable libp2p resource limits (bounded only by OS ulimit and RAM).
+  #   "scaled"  auto-scale limits as if the host had `scaledMemoryMiB` MiB of memory.
+  # Example: lift caps on a small host without going fully unbounded:
+  #
+  # resourceManager:
+  #   strategy: scaled
+  #   scaledMemoryMiB: 16384
+  # Optional caps on the inbound direct-send streams this node accepts (KLC-2433).
+  # Omitting this section, or leaving a knob at 0, keeps the built-in defaults:
+  # 4 streams per peer and 512 across all peers. A well-behaved peer reuses a
+  # single direct-send stream, so the per-peer default is headroom for
+  # reset/reopen churn; the node-wide cap bounds reader goroutines when a source
+  # rotates peer identities. Raise them only if legitimate traffic is refused —
+  # the node logs "refusing inbound direct stream" when a cap is hit. Negative
+  # values are a configuration error and the node refuses to start.
+  #
+  # maxSeenMessages caps the direct-send replay cache, which rejects a repeated
+  # (peer, sequence number) inside a 120s window. Every peer gets a fixed share of
+  # 64 identifiers, so the cache tracks maxSeenMessages/64 peers (2048 by default)
+  # and a peer's own traffic is the only thing that can shorten its own window. A
+  # peer arriving while every slot is held by a peer active in the last 120s is
+  # not tracked, and so not deduplicated, until one of them goes quiet. The node
+  # warns when that happens ("direct-send replay cache full"), at most once per
+  # 120s; if you see it, raise this value. Memory is about 2.5 KiB per tracked peer,
+  # allocated only as peers appear, so the value is a ceiling and raising it is
+  # cheap. 0 means the default; a positive value below 64 is rejected at startup,
+  # since one peer share is the smallest real cap.
+  #
+  # directSend:
+  #   maxInboundStreamsPerPeer: 4
+  #   maxInboundStreamsTotal: 512
+  #   maxSeenMessages: 131072
 
 logs:
   logFileLifeSpanInSec: 86400
@@ -195,6 +208,43 @@ antiflood:
     sameSourceRequests: 10000
     # SameSourceResetIntervalInSec time frame between counter reset, in seconds
     sameSourceResetIntervalInSec: 1
+    # WebSocketConnections caps simultaneous live /subscribe WebSocket connections node-wide.
+    # Neither throttler above bounds live WS connections: simultaneousRequests releases its slot
+    # at the HTTP->WS upgrade, and sameSourceRequests counts requests until its periodic reset,
+    # so a long-lived socket costs it one request. 0 = unlimited.
+    webSocketConnections: 4096
+    # WebSocketConnectionsPerIP caps simultaneous live /subscribe connections from a single
+    # source IP. Behind a reverse proxy every client shares the proxy IP, so raise this (or set
+    # 0 to disable) for proxied/public deployments. 0 = unlimited.
+    webSocketConnectionsPerIP: 1024
+    # LogWebSocketConnections caps simultaneous live /log WebSocket connections node-wide.
+    # Each live /log connection registers a process-global log observer, so every log line is
+    # formatted and fanned out once per connection. Keep this small: /log is an operator
+    # diagnostic route, not a public feed. 0 = built-in default (32); this cap cannot be
+    # disabled, so set a high value rather than 0 to lift it.
+    logWebSocketConnections: 32
+    # LogWebSocketConnectionsPerIP caps simultaneous live /log connections from a single
+    # source IP. Behind a reverse proxy every client shares the proxy IP, so raise this (or set
+    # 0 to disable) for proxied deployments — it is much tighter than webSocketConnectionsPerIP
+    # above, so it is the one that will bite first. 0 = unlimited.
+    logWebSocketConnectionsPerIP: 8
+    # LogWebSocketAllowedOrigins lists the browser origins allowed to open /log. Clients that
+    # send no Origin header (the log viewer, curl, wscat) are always allowed; a browser is only
+    # allowed on an exact match, so the empty default blocks web pages while leaving normal
+    # tooling working. Add an entry (e.g. "https://ops.example.com") only for a browser-based
+    # log viewer you run yourself.
+    logWebSocketAllowedOrigins: []
+    # WebSocketMaxAddressesPerSubscribe caps addresses accepted in one /subscribe call. The
+    # inbound frame read limit is derived from this so a maximal subscribe always fits. 0 = default.
+    webSocketMaxAddressesPerSubscribe: 10000
+    # WebSocketMaxAddressesPerClient caps the total addresses one connection may watch across all
+    # of its subscribe calls. 0 = default.
+    webSocketMaxAddressesPerClient: 50000
+    # WebSocketPostWorkers bounds concurrent postWSConnection mirror requests. 0 = default.
+    webSocketPostWorkers: 8
+    # WebSocketPostQueueSize bounds pending mirror sends queued behind webSocketPostWorkers
+    # before new ones are dropped. 0 = default.
+    webSocketPostQueueSize: 1000
     # EndpointsThrottlers represents a map for maximum simultaneous go routines for an endpoint
     endpointsThrottlers:
       - endpoint: /transaction/:hash
@@ -617,6 +667,7 @@ epochStart:
 virtualMachine:
   execution:
     timeOutForSCExecutionInMilliseconds: 500 # 0.5 seconds = 500 milliseconds
+    timeOutTolerancePercentage: 15 # 15% tolerance
     wasmerSIGSEGVPassthrough: false # must be false for release
     wasmVMVersions:
       - startEpoch: 0
