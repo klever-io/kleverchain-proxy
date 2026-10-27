@@ -59,8 +59,6 @@ services:
       - ./data/logs:/opt/klever-blockchain/logs
     entrypoint: [ "/usr/local/bin/validator", "--log-level=*:INFO", "--log-save", "--use-log-view", "--rest-api-interface=0.0.0.0:8080"]
     #entrypoint: [ "/usr/local/bin/validator", "--log-level=*:INFO", "--log-save", "--use-log-view", "--rest-api-interface=0.0.0.0:8080","--import-db=/opt/klever-blockchain/db/backup", "--import-db-no-sig-check"]
-    ports:
-      - 8080:8080
     networks:
       - klever
 

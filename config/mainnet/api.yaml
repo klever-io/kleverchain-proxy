@@ -100,9 +100,10 @@ apiPackages:
       - name: /debug
         open: true
         secured: true
+      # Unsecured on this stack: klever-proxy calls /node/peerinfo with no
+      # Basic Auth. The indexer does not publish port 8080.
       - name: /peerinfo
         open: true
-        secured: true
       - name: /statistics
         open: true
       - name: /set-redundancy
