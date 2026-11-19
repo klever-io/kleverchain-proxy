@@ -1,12 +1,22 @@
 p2p:
   node:
     port: 37373-38383
-    seed:
     maximumExpectedPeerCount: 0
     thresholdMinConnectedPeers: 3
     broadcastIP:
   kadDhtPeerDiscovery:
     enabled: true
+    #available options:
+    #  `continuous` connects to the first seednode of initialPeerList that answers and goes back to the
+    #              seednodes only when the node falls below thresholdMinConnectedPeers
+    #  `optimized` keeps up to maxSeeders seednodes of initialPeerList connected and protected from
+    #              connection trimming, topping them up every 5 minutes (every refreshIntervalInSec
+    #              while connected to none). Requires sharding type `NilListSharder`, and refuses to
+    #              start on a malformed initialPeerList entry or one naming this node; `continuous`
+    #              skips those entries instead
+    type: optimized
+    # how many seednodes the `optimized` discoverer keeps connected (0 = all of them)
+    maxSeeders: 2
     refreshIntervalInSec: 10
     protocolID: /klv/kad/0.0.1
     initialPeerList:
@@ -89,6 +99,9 @@ preferences:
   identity:
   # RedundancyLevel represents the level of redundancy used by the node (-1 = disabled, 0 = main instance (default),
   # 1 = first backup, 2 = second backup, etc.)
+  # Main and backup machines must never share a p2p key file (--p2p-key-pem-file): a backup with the main machine's
+  # peer ID cannot see the main as active and starts signing with the same validator key. Do not copy p2pKey.pem
+  # along with validatorKey.pem. A backup ignores the default key path and loads one only when --p2p-key-pem-file is set.
   redundancyLevel: 0
   # statics pooling interval
   statusPollingIntervalSec: 2
@@ -245,12 +258,24 @@ antiflood:
     # WebSocketPostQueueSize bounds pending mirror sends queued behind webSocketPostWorkers
     # before new ones are dropped. 0 = default.
     webSocketPostQueueSize: 1000
-    # EndpointsThrottlers represents a map for maximum simultaneous go routines for an endpoint
+    # EndpointsThrottlers represents a map for maximum simultaneous go routines for an endpoint.
+    # A request over the limit gets 429 system_busy. Enforced since KLC-2941: before it, a
+    # misspelled yaml tag made every entry a no-op, so these limits are new to production.
     endpointsThrottlers:
       - endpoint: /transaction/:hash
         maxNumGoRoutines: 10
       - endpoint: /transaction/send
         maxNumGoRoutines: 2
+      - endpoint: /transaction/simulate
+        maxNumGoRoutines: 1
+      - endpoint: /vm/hex
+        maxNumGoRoutines: 10
+      - endpoint: /vm/string
+        maxNumGoRoutines: 10
+      - endpoint: /vm/int
+        maxNumGoRoutines: 10
+      - endpoint: /vm/query
+        maxNumGoRoutines: 10
 
   txAccumulator:
     # MaxAllowedTimeInMilliseconds is used as a time frame in which the node gathers transactions.
@@ -674,7 +699,13 @@ virtualMachine:
         version: "v1.0"
 
   querying:
+    # Each query goes to the next VM round-robin before it waits, so with more than one VM a
+    # query can be refused as busy while another VM is idle.
     numConcurrentVMs: 1
+    # A query waits at most this long for a busy query VM, then is refused as busy. 0 = 1 second.
+    # It also bounds the wait for the transaction simulator, which runs smart contract
+    # transactions for /transaction/send, /transaction/simulate and /transaction/estimate-fee.
+    maxQueryWaitInMilliseconds: 1000
     timeOutForSCExecutionInMilliseconds: 500 # 0.5 seconds = 500 milliseconds
     wasmerSIGSEGVPassthrough: false # must be false for release
     wasmVMVersions:

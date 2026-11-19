@@ -37,6 +37,8 @@ enableEpochs:
   fixAuditChangesV5: 6160
   # Audit Changes V6
   fixAuditChangesV6: 6312
+  # Must be after fixAuditChangesV6.
+  fixAuditChangesV7: 6424
 
 gasSchedule:
   gasScheduleByEpochs:
